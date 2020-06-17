@@ -1,13 +1,19 @@
 This is a module containing numerical methods of unconditional multidimensional minimization such as:
 
 optimize_module.CoordinateDescent()
+
 optimize_module.NelderMead()
+
 optimize_module.GradientDescent()
+
 optimize_module.ConjugateGradients()
+
 optimize_module.Newton()
+
 optimize_module.Marquardt()
 
 Zero order methods
+
 	1. Coordinate descent method
 		call example: optimize_module.CoordinateDescent(f,x,eps),
 		f - is function object that you declared above such as def f(x): return 4.*(x[0]-5)**2.+(x[1]-6)**2
@@ -18,6 +24,7 @@ Zero order methods
 		f - is function object that you declared above such as def f(x): return 4.*(x[0]-5)**2.+(x[1]-6)**2
 		x1,x2,x3 - point coordinates exmple: x1=np.array([9. , 2.]), x2=np.array([3., 5.]), x3=np.array([4. , 10.])
 First order methods
+
 	1. Method of the fastest gradient descent
 		call example: optimize_module.GradientDescent(f,grad,x,eps),
 		f - is function object that you declared above such as def f(x): return 4.*(x[0]-5)**2.+(x[1]-6)**2
@@ -34,6 +41,7 @@ First order methods
 		eps - up to this number, the algorithm will work
 
 Second order methods
+
 	1. Newton's method
 		call example: optimize_module.Newton(f,grad,hesse,x,eps),
 		f - is function object that you declared above such as def f(x): return 4*(x[0]-5)**2 + (x[1]-6)**2
